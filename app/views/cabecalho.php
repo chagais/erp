@@ -6,7 +6,7 @@
 		<li><a href="#" class="text-uppercase"><i class="fas fa-lock"></i> Login</a></li>
 		<li>
 			<img src="<?php echo URL_BASE ?>assets/img/foto01.jpg" class="img-user">
-			<span class="text-dark">Tiago Oliveira</span>
+			<span class="text-dark">Tiago Souza</span>
 		</li>
 	</ul>
 </div>	
