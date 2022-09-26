@@ -1,6 +1,6 @@
 <?php
 define("SERVIDOR", "localhost");
-define("BANCO", "teste");
+define("BANCO", "erp");
 define("USUARIO", "root");
 define("SENHA", "");
 define("CHARSET","UTF8");
@@ -9,9 +9,9 @@ define("CHARSET","UTF8");
 define('CONTROLLER_PADRAO', 'home');
 define('METODO_PADRAO', 'index');
 define('NAMESPACE_CONTROLLER', 'app\\controllers\\');
-define('TIMEZONE',"America/Fortaleza");
+define('TIMEZONE',"America/Sao_Paulo");
 define('CAMINHO'            , realpath('./'));
-define("TITULO_SITE","mjailton-ligando vc ao mundo do conhecimento");
+define("TITULO_SITE","Sistema ERP");
 
 define('URL_BASE', 'http://' . $_SERVER["HTTP_HOST"].'/erp/');
 define('URL_IMAGEM', "http://". $_SERVER['HTTP_HOST'] . "/estrutura_mvc/UP/");

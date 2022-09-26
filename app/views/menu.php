@@ -19,8 +19,8 @@
 			<div id="accordion" >
 				  <h3>Categoria</h3>
 					<ul>
-						<li><a href="lst_categoria.html">Lista todos</a></li>
-						<li><a href="frm_categoria.html"> Cadastrar novo</a></li>							
+						<li><a href="<?php echo URL_BASE ."categoria" ?>">Lista todos</a></li>
+						<li><a href="<?php echo URL_BASE ."categoria/create" ?>"> Cadastrar novo</a></li>							
 					</ul>
 				  <h3>Unidade</h3>
 					<ul>
