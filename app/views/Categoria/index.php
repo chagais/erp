@@ -38,15 +38,7 @@
 		<div class="col-12">
 			<div class="px-2">			
 				<div class="p-1">
-					<div class="msg sucesso">
-					<p><b><i class="fas fa-check"></i> Mensagem de boas vindas</b> Parabéns seu produto foi inserido com sucesso <a href="javascript:;" onclick="fecharMsg()" class="fas fa-times float-right"></a></p>
-					</div>
-					<div class="msg erro">
-					<p><b><i class="fas fa-times"></i> Mensagem de Erro</b> Houve um erro <a href="javascript:;" onclick="fecharMsg()" class="fas fa-times float-right"></a></p>
-					</div>
-					<div class="msg info">
-					<p><b><i class="fas fa-exclamation-triangle"></i> Mensagem de aviso</b> Tem um aviso pra você <a href="javascript:;" onclick="fecharMsg()" class="fas fa-times float-right"></a></p>
-					</div>
+                    <?php $this->verMsg(); ?>
 				</div>
                <div class="tabela-responsiva pb-4 mt-3">
                     <table cellpadding="0" cellspacing="0" id="dataTable" width="100%">
@@ -59,70 +51,15 @@
                                     </tr>
                             </thead>
                             <tbody>  
-                                                                   
+                            <?php foreach ($lista as $categoria) {?>                                       
                              <tr>
-								<td align="center">1</td>
-                                <td align="left">Panela</td>
+								<td align="center"><?php echo $categoria->id_categoria?></td>
+                                <td align="left"><?php echo $categoria->categoria?></td>
                                 											
-                                <td align="center"><a href="frm_categoria.html" class="d-inline-block btn btn-outline-roxo btn-pequeno"><i class="fas fa-edit"></i> Editar</a>                              </td>									
-                                <td align="center"><a href="javascript:;" onclick="return excluir(this)" data-entidade ="categoria" data-id="1" class="d-inline-block btn btn-outline-vermelho btn-pequeno"><i class="fas fa-trash-alt"></i> Excluir</a>                                </td>
+                                <td align="center"><a href="<?php URL_BASE ."categoria/edit/" .$categoria->id_categoria?>" class="d-inline-block btn btn-outline-roxo btn-pequeno"><i class="fas fa-edit"></i> Editar</a>                              </td>									
+                                <td align="center"><a href="javascript:;" onclick="return excluir(this)" data-entidade ="categoria" data-id="<?php echo $categoria->id_categoria?>" class="d-inline-block btn btn-outline-vermelho btn-pequeno"><i class="fas fa-trash-alt"></i> Excluir</a>                                </td>
                              </tr>                                       
-                                                              
-                             <tr>
-								<td align="center">2</td>
-                                <td align="left">Cuzcuzeira</td>
-                                											
-                                <td align="center"><a href="frm_categoria.html" class="d-inline-block btn btn-outline-roxo btn-pequeno"><i class="fas fa-edit"></i> Editar</a>                              </td>									
-                                <td align="center"><a href="javascript:;" onclick="return excluir(this)" data-entidade ="categoria" data-id="2" class="d-inline-block btn btn-outline-vermelho btn-pequeno"><i class="fas fa-trash-alt"></i> Excluir</a>                                </td>
-                             </tr>                                       
-                                                              
-                             <tr>
-								<td align="center">3</td>
-                                <td align="left">Copo</td>
-                                											
-                                <td align="center"><a href="frm_categoria.html" class="d-inline-block btn btn-outline-roxo btn-pequeno"><i class="fas fa-edit"></i> Editar</a>                              </td>									
-                                <td align="center"><a href="javascript:;" onclick="return excluir(this)" data-entidade ="categoria" data-id="3" class="d-inline-block btn btn-outline-vermelho btn-pequeno"><i class="fas fa-trash-alt"></i> Excluir</a>                                </td>
-                             </tr>                                       
-                                                              
-                             <tr>
-								<td align="center">4</td>
-                                <td align="left">Caneca</td>
-                                											
-                                <td align="center"><a href="frm_categoria.html" class="d-inline-block btn btn-outline-roxo btn-pequeno"><i class="fas fa-edit"></i> Editar</a>                              </td>									
-                                <td align="center"><a href="javascript:;" onclick="return excluir(this)" data-entidade ="categoria" data-id="4" class="d-inline-block btn btn-outline-vermelho btn-pequeno"><i class="fas fa-trash-alt"></i> Excluir</a>                                </td>
-                             </tr>                                       
-                                                              
-                             <tr>
-								<td align="center">5</td>
-                                <td align="left">Papeiro</td>
-                                											
-                                <td align="center"><a href="frm_categoria.html" class="d-inline-block btn btn-outline-roxo btn-pequeno"><i class="fas fa-edit"></i> Editar</a>                              </td>									
-                                <td align="center"><a href="javascript:;" onclick="return excluir(this)" data-entidade ="categoria" data-id="5" class="d-inline-block btn btn-outline-vermelho btn-pequeno"><i class="fas fa-trash-alt"></i> Excluir</a>                                </td>
-                             </tr>                                       
-                                                              
-                             <tr>
-								<td align="center">6</td>
-                                <td align="left">Leiteira</td>
-                                											
-                                <td align="center"><a href="frm_categoria.html" class="d-inline-block btn btn-outline-roxo btn-pequeno"><i class="fas fa-edit"></i> Editar</a>                              </td>									
-                                <td align="center"><a href="javascript:;" onclick="return excluir(this)" data-entidade ="categoria" data-id="6" class="d-inline-block btn btn-outline-vermelho btn-pequeno"><i class="fas fa-trash-alt"></i> Excluir</a>                                </td>
-                             </tr>                                       
-                                                              
-                             <tr>
-								<td align="center">7</td>
-                                <td align="left">Frigideira</td>
-                                											
-                                <td align="center"><a href="frm_categoria.html" class="d-inline-block btn btn-outline-roxo btn-pequeno"><i class="fas fa-edit"></i> Editar</a>                              </td>									
-                                <td align="center"><a href="javascript:;" onclick="return excluir(this)" data-entidade ="categoria" data-id="7" class="d-inline-block btn btn-outline-vermelho btn-pequeno"><i class="fas fa-trash-alt"></i> Excluir</a>                                </td>
-                             </tr>                                       
-                                                              
-                             <tr>
-								<td align="center">7</td>
-                                <td align="left">Frigideira</td>
-                                											
-                                <td align="center"><a href="frm_categoria.html" class="d-inline-block btn btn-outline-roxo btn-pequeno"><i class="fas fa-edit"></i> Editar</a>                              </td>									
-                                <td align="center"><a href="javascript:;" onclick="return excluir(this)" data-entidade ="categoria" data-id="7" class="d-inline-block btn btn-outline-vermelho btn-pequeno"><i class="fas fa-trash-alt"></i> Excluir</a>                                </td>
-                             </tr>               						
+                             <?php } ?>                                              						
                         </tbody>
                     </table>
 								

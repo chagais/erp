@@ -36,20 +36,8 @@ class CategoriaController extends Controller{
     public function salvar(){
         $categoria = new \stdClass();
         $categoria->id_categoria        = $_POST["id_categoria"];
-        $categoria->categoria 		    = $_POST['categoria'];
-        $categoria->endereco 		    = $_POST['endereco'];
-        $categoria->complemento 		= $_POST['complemento'];
-        $categoria->numero 			= $_POST['numero'];
-        $categoria->bairro 			= $_POST['bairro'];
-        $categoria->cidade 			= $_POST['cidade'];
-        $categoria->uf 		        = $_POST['uf'];
-        $categoria->cep		        = $_POST['cep'];
-        $categoria->celular	        = $_POST['celular'];
-        $categoria->cpf 			    = $_POST['cpf'];
-        $categoria->sexo		        = $_POST['sexo'];
-        $categoria->email		        = $_POST['email'];
-        $categoria->senha		        = $_POST['senha'];
-        $categoria->data_cadastro		= date("Y-m-d");
+        $categoria->categoria 		    = $_POST["categoria"];
+
         
         Flash::setForm($categoria);
         if(CategoriaService::salvar($categoria, $this->campo, $this->tabela)){
