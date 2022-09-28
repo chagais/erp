@@ -21,4 +21,4 @@
 						<input type="submit"  value="Salvar categoria" class="btn btn-laranja d-block m-auto">
 					</div>
 				</div>
-        </form>
+        </form> 

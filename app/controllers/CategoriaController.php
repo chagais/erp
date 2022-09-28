@@ -36,7 +36,7 @@ class CategoriaController extends Controller{
     public function salvar(){
         $categoria = new \stdClass();
         $categoria->id_categoria        = $_POST["id_categoria"];
-        $categoria->categoria 		    = $_POST["categoria"];
+        $categoria->categoria 		    = $_POST['categoria'];
 
         
         Flash::setForm($categoria);

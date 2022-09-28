@@ -53,10 +53,10 @@
                             <tbody>  
                             <?php foreach ($lista as $categoria) {?>                                       
                              <tr>
-								<td align="center"><?php echo $categoria->id_categoria?></td>
+				<td align="center"><?php echo $categoria->id_categoria?></td>
                                 <td align="left"><?php echo $categoria->categoria?></td>
                                 											
-                                <td align="center"><a href="<?php URL_BASE ."categoria/edit/" .$categoria->id_categoria?>" class="d-inline-block btn btn-outline-roxo btn-pequeno"><i class="fas fa-edit"></i> Editar</a>                              </td>									
+                                <td align="center"><a href="<?php echo URL_BASE ."categoria/edit/" .$categoria->id_categoria?>" class="d-inline-block btn btn-outline-roxo btn-pequeno"><i class="fas fa-edit"></i> Editar</a>                              </td>									
                                 <td align="center"><a href="javascript:;" onclick="return excluir(this)" data-entidade ="categoria" data-id="<?php echo $categoria->id_categoria?>" class="d-inline-block btn btn-outline-vermelho btn-pequeno"><i class="fas fa-trash-alt"></i> Excluir</a>                                </td>
                              </tr>                                       
                              <?php } ?>                                              						
