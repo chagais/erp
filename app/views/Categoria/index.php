@@ -38,10 +38,10 @@
 		<div class="col-12">
 			<div class="px-2">			
 				<div class="p-1">
-                    <?php $this->verMsg(); ?>
+                                    <?php $this->verMsg(); ?>
 				</div>
                <div class="tabela-responsiva pb-4 mt-3">
-                    <table cellpadding="0" cellspacing="0" id="dataTable" width="100%">
+                        <table width="100%" cellpadding="0" cellspacing="0" id="dataTable">	
                             <thead>
                                     <tr>
                                        <th align="center">Id</th>
